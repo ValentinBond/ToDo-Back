@@ -9,9 +9,9 @@ class ProjectRoutes {
   }
 
   _config() {
-    this.router.delete('/:id',  ProjectController.removeProject);
+    this.router.delete('/:id', ProjectController.removeProject);
     this.router.post('/create', bodyValidator(ProjectValidator.project), ProjectController.createProject);
-    this.router.get('/list',  ProjectController.getProjectList);
+    this.router.get('/list', ProjectController.getProjectList);
     this.router.put('/:id',  ProjectController.editProject);
   }
 }
